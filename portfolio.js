@@ -471,7 +471,7 @@ export const seoData = {
     'A passionate Full Stack Web Development enthusiast.',
   author: 'Salman Sami Khan',
   image: 'https://avatars3.githubusercontent.com/u/81870466?v=4',
-  url: 'https://developer-portfolio-1hanzla100.vercel.app',
+  url: 'https://github.com/SalmanSamiKhan',
   keywords: [
     'Salman',
     'Salman Sami Khan',
