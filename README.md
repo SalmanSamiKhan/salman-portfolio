@@ -2,13 +2,13 @@
 
 ## Portfolio Website built with Next.js, bootstrap that helps to showcase my work and skills as a software developer.
 
-<!-- <p align="center">
+<p align="center">
   <kbd>
-    <img src="https://github.com/1hanzla100/developer-portfolio/blob/master/picture.PNG"></img>
+    <img src="ss.png"></img>
   </kbd>
 </p>
 
-## To view a live example, **[click here](https://developer-portfolio-1hanzla100.vercel.app/)**. -->
+## To view a live example, **[click here](https://salman-portfolio.vercel.app/)**.
 
 
 ## Sections

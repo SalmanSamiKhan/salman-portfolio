@@ -16,7 +16,7 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks = {
-  url: 'https://SalmanSamiKhan.github.io/',
+  url: 'https://salman-portfolio.vercel.app/',
   linkedin: 'https://www.linkedin.com/in/salman-sami-khan-69855a1a0/',
   github: 'https://github.com/SalmanSamiKhan',
   email: 'mailto:salmansamiikhan@gmail.com',
