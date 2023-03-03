@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import { Card, CardBody, Col, Button } from 'reactstrap';
+import { Card, CardBody, Col, Button, UncontrolledTooltip } from 'reactstrap';
 
 import { Fade } from 'react-reveal';
+import { Icon } from '@iconify/react';
 
 const ProjectsCard = ({ data }) => {
   return (
@@ -14,6 +15,32 @@ const ProjectsCard = ({ data }) => {
               <div className="pl-4">
                 <h3>{data.name}</h3>
                 <p className="description mt-3">{data.desc}</p>
+
+                <div className="d-flex justify-content-center flex-wrap mb-3">
+                  {data.softwareSkills.map((skill, i) => {
+                    return (
+                      <Fragment key={i}>
+                        <div
+                          className="icon icon-shape shadow-sm rounded-circle m-1"
+                          id={skill.skillName.replace(/\s/g, '')}
+                        >
+                          <Icon
+                            icon={skill.fontAwesomeClassname}
+                            data-inline="false"
+                          ></Icon>
+                        </div>
+                        <UncontrolledTooltip
+                          delay={0}
+                          placement="bottom"
+                          target={skill.skillName.replace(/\s/g, '')}
+                        >
+                          {skill.skillName}
+                        </UncontrolledTooltip>
+                      </Fragment>
+                    );
+                  })}
+                </div>
+
                 {data.github ? (
                   <Button
                     className="btn-icon"

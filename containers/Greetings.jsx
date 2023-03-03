@@ -14,7 +14,7 @@ const Greetings = () => {
   return (
     <main>
       <div className="position-relative">
-        <section className="section section-lg section-shaped pb-250">
+        <section className="section section-lg section-shaped pb-250" id='home'>
           <div className="shape shape-style-1 bg-gradient-info">
             <span />
             <span />
@@ -30,7 +30,7 @@ const Greetings = () => {
             <div className="col px-0">
               <Row>
                 <Col lg="6">
-                  <h1 className="display-3 text-white">
+                  <h1 className="display-3 text-white mt-5">
                     {greetings.title + ' '}
                   </h1>
                   <p className="lead text-white">{greetings.description}</p>
@@ -40,6 +40,7 @@ const Greetings = () => {
                       className="btn-white btn-icon mb-3 mb-sm-0 ml-1"
                       color="default"
                       href={greetings.resumeLink}
+                      target="_blank"
                     >
                       <span className="btn-inner--icon mr-1">
                         <i className="fa fa-file" />

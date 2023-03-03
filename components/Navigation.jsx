@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from "react-router-dom";
-
 import { greetings, socialLinks } from '../portfolio';
 import Headroom from 'headroom.js';
+import $ from "jquery"
 import Link from 'next/link';
 import {
   UncontrolledCollapse,
@@ -16,12 +15,32 @@ import {
   Col,
 } from 'reactstrap';
 
+const onMouseEnter = (event) => {
+  const el = event.target;
+  el.style.backgroundColor = 'white';
+  el.style.color = 'blue'
+};
+
+const onMouseOut = (event) => {
+  const el = event.target;
+  el.style.backgroundColor = "transparent";
+  el.style.color = 'white'
+};
+
 const Navigation = () => {
   const [collapseClasses, setCollapseClasses] = useState('');
-  const onExiting = () => setCollapseClasses('collapsing-out');
-
+  const onExiting = () =>{
+    console.log('collapsing')
+    setCollapseClasses('collapsing-out')
+  }
   const onExited = () => setCollapseClasses('');
 
+  const handleClick = (e)=>{ 
+    if ($('#navbar_global').is(':visible')) {
+      document.getElementById('navbar_global').click()
+    }
+  }
+  
   useEffect(() => {
     let headroom = new Headroom(document.getElementById('navbar-main'));
     // initialise
@@ -55,6 +74,7 @@ const Navigation = () => {
               className={collapseClasses}
               onExiting={onExiting}
               onExited={onExited}
+              
             >
               <div className="navbar-collapse-header">
                 <Row>
@@ -64,7 +84,8 @@ const Navigation = () => {
                     </h3>
                   </Col>
                   <Col className="collapse-close" xs="6">
-                    <button className="navbar-toggler" id="navbar_global">
+                    <button className="navbar-toggler" id="navbar_global"
+                    >
                       <span />
                       <span />
                     </button>
@@ -72,7 +93,71 @@ const Navigation = () => {
                 </Row>
               </div>
               <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                {socialLinks.facebook && (
+                
+
+
+                {/* Testing */}
+                <NavItem>
+                <NavLink
+                  href='#home'
+                  activeStyle={{ fontWeight: "bold" }}
+                  style={{ color: 'white', fontSize:'1.2em' }}
+                  onClick={handleClick}
+                  onMouseEnter={(event) => onMouseEnter(event)}
+                  onMouseOut={(event) => onMouseOut(event)}>
+                  Home
+                </NavLink>
+                  </NavItem>
+
+                <NavItem>
+                <NavLink
+                  href='#skills'
+                  activeStyle={{ fontWeight: "bold" }}
+                  style={{ color: 'white', fontSize:'1.2em' }}
+                  onClick={handleClick}
+                  onMouseEnter={(event) => onMouseEnter(event)}
+                  onMouseOut={(event) => onMouseOut(event)}>
+                  Skills
+                </NavLink>
+                  </NavItem>
+
+                <NavItem>
+                <NavLink
+                  href='#education'
+                  activeStyle={{ fontWeight: "bold" }}
+                  style={{ color: 'white' , fontSize:'1.2em' }}
+                  onClick={handleClick}
+                  onMouseEnter={(event) => onMouseEnter(event)}
+                  onMouseOut={(event) => onMouseOut(event)}>
+                  Education
+                </NavLink>
+                  </NavItem>
+
+                <NavItem>
+                <NavLink
+                  href='#projects'
+                  activeStyle={{ fontWeight: "bold" }}
+                  style={{ color: 'white', fontSize:'1.2em' }}
+                  onClick={handleClick}
+                  onMouseEnter={(event) => onMouseEnter(event)}
+                  onMouseOut={(event) => onMouseOut(event)}>
+                  Projects
+                </NavLink>
+                  </NavItem>
+
+                <NavItem>
+                <NavLink
+                  href='#contact'
+                  activeStyle={{ fontWeight: "bold" }}
+                  style={{ color: 'white', fontSize:'1.2em' }}
+                  onClick={handleClick}
+                  onMouseEnter={(event) => onMouseEnter(event)}
+                  onMouseOut={(event) => onMouseOut(event)}>
+                  Contact
+                </NavLink>
+                  </NavItem>
+
+                  {/* {socialLinks.facebook && (
                   <NavItem>
                     <NavLink
                       rel="noopener"
@@ -88,6 +173,8 @@ const Navigation = () => {
                     </NavLink>
                   </NavItem>
                 )}
+
+
                 {socialLinks.instagram && (
                   <NavItem>
                     <NavLink
@@ -151,7 +238,7 @@ const Navigation = () => {
                       </span>
                     </NavLink>
                   </NavItem>
-                )}
+                )} */}
               </Nav>
             </UncontrolledCollapse>
           </Container>

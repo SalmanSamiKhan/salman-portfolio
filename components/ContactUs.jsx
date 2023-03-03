@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import classnames from 'classnames';
 import Alert from './Alerts';
@@ -33,32 +33,48 @@ export const ContactUs = () => {
     message: ' Oops! Something went wrong. Please try again later.',
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    console.log();
+  const [name, setName] = useState('')
+  const [mail, setMail] = useState('')
+  const [message, setMessage] = useState('')
 
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setAlert(successAlert);
-        },
-        (error) => {
-          console.log(error.text);
-          setAlert(errorAlert);
-        }
-      );
+  const sendEmail = (e) => {
+
+    // Validation using js
+
+    const pattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/
+
+    if (name === '' || mail === '' || message === '' || !mail.match(pattern)) {
+      return
+    }
+    else {
+      e.preventDefault();
+      console.log();
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          form.current,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setName('')
+            setMail('')
+            setMessage('')
+            setAlert(successAlert);
+          },
+          (error) => {
+            console.log(error.text);
+            setAlert(errorAlert);
+          }
+        );
+    }
   };
 
   return (
     <>
-      <section className="section section-lg section-shaped">
+      <section className="section section-lg section-shaped" id='contact'>
         <form ref={form} onSubmit={sendEmail}>
           {alert && (
             <Alert
@@ -87,6 +103,9 @@ export const ContactUs = () => {
                           placeholder="Your name"
                           type="text"
                           name="user_name"
+                          onChange={(e) => setName(e.target.value)}
+                          value={name}
+                          required
                         />
                       </InputGroup>
                     </FormGroup>
@@ -101,6 +120,10 @@ export const ContactUs = () => {
                           placeholder="Email address"
                           name="user_email"
                           type="email"
+                          pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
+                          onChange={(e) => setMail(e.target.value)}
+                          value={mail}
+                          required
                         />
                       </InputGroup>
                     </FormGroup>
@@ -112,6 +135,9 @@ export const ContactUs = () => {
                         placeholder="Type a message..."
                         rows="4"
                         type="textarea"
+                        onChange={(e) => setMessage(e.target.value)}
+                        value={message}
+                        required
                       />
                     </FormGroup>
                     <div>
