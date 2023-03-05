@@ -6,7 +6,7 @@ export const greetings = {
   description:
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
   resumeLink:
-    "https://drive.google.com/file/d/1PcdAeagBcvXAUZeksd4RWOz6laENxu5-/view?usp=sharing",
+    "https://docs.google.com/document/d/1eXWzL0jXaSAo2t6OXucTZ7XTsxurvGP--VcRV4koyqM/edit?usp=sharing",
 };
 
 export const openSource = {
@@ -16,7 +16,7 @@ export const openSource = {
 export const contact = {};
 
 export const socialLinks = {
-  url: 'https://salman-portfolio.vercel.app/',
+  url: 'https://salman.vercel.app/',
   linkedin: 'https://www.linkedin.com/in/salman-sami-khan-69855a1a0/',
   github: 'https://github.com/SalmanSamiKhan',
   email: 'mailto:salmansamiikhan@gmail.com',
@@ -93,7 +93,7 @@ export const skillsSection = {
         },
         {
           skillName: 'NodeJs',
-          fontAwesomeClassname: 'vscode-icons:file-type-node',
+          fontAwesomeClassname: 'logos:nodejs-icon',
         },
         {
           skillName: 'ExpressJs',
@@ -167,7 +167,7 @@ export const skillsSection = {
         },
         {
           skillName: 'MongoDB',
-          fontAwesomeClassname: 'skill-icons:mongodb',
+          fontAwesomeClassname: 'vscode-icons:file-type-mongo',
         },
       ],
     },
@@ -294,9 +294,10 @@ export const projects = [
     name: 'Bookmania',
     desc: 'A fully functional ecommerce book shop website',
     softwareSkills: [
+      
       {
         skillName: 'NodeJs',
-        fontAwesomeClassname: 'vscode-icons:file-type-node',
+        fontAwesomeClassname: 'logos:nodejs-icon',
       },
       {
         skillName: 'ExpressJs',
@@ -311,12 +312,12 @@ export const projects = [
         fontAwesomeClassname: 'logos:bootstrap',
       },
       {
-        skillName: 'HTML5',
-        fontAwesomeClassname: 'vscode-icons:file-type-html',
+        skillName: 'JWT',
+        fontAwesomeClassname: 'logos:jwt-icon',
       },
       {
-        skillName: 'CSS3',
-        fontAwesomeClassname: 'vscode-icons:file-type-css',
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/bookmania',
@@ -326,9 +327,10 @@ export const projects = [
     name: 'Notebook',
     desc: 'An online note taking app with user authentication',
     softwareSkills: [
+
       {
         skillName: 'NodeJs',
-        fontAwesomeClassname: 'vscode-icons:file-type-node',
+        fontAwesomeClassname: 'logos:nodejs-icon',
       },
       {
         skillName: 'ExpressJs',
@@ -343,12 +345,12 @@ export const projects = [
         fontAwesomeClassname: 'logos:bootstrap',
       },
       {
-        skillName: 'HTML5',
-        fontAwesomeClassname: 'vscode-icons:file-type-html',
+        skillName: 'JWT',
+        fontAwesomeClassname: 'logos:jwt-icon',
       },
       {
-        skillName: 'CSS3',
-        fontAwesomeClassname: 'vscode-icons:file-type-css',
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/notebook',
@@ -358,13 +360,10 @@ export const projects = [
     name: 'Online Todolist',
     desc: 'A fully functional beautiful Todolist app',
     softwareSkills: [
-      {
-        skillName: 'JavaScript',
-        fontAwesomeClassname: 'logos:javascript',
-      },
+
       {
         skillName: 'NodeJs',
-        fontAwesomeClassname: 'vscode-icons:file-type-node',
+        fontAwesomeClassname: 'logos:nodejs-icon',
       },
       {
         skillName: 'ExpressJs',
@@ -381,6 +380,10 @@ export const projects = [
       {
         skillName: 'CSS3',
         fontAwesomeClassname: 'vscode-icons:file-type-css',
+      },
+      {
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/Online-Todolist',
@@ -390,13 +393,10 @@ export const projects = [
     name: 'Blog Website',
     desc: 'An online journal website',
     softwareSkills: [
-      {
-        skillName: 'JavaScript',
-        fontAwesomeClassname: 'logos:javascript',
-      },
+
       {
         skillName: 'NodeJs',
-        fontAwesomeClassname: 'vscode-icons:file-type-node',
+        fontAwesomeClassname: 'logos:nodejs-icon',
       },
       {
         skillName: 'ExpressJs',
@@ -414,6 +414,10 @@ export const projects = [
         skillName: 'CSS3',
         fontAwesomeClassname: 'vscode-icons:file-type-css',
       },
+      {
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
+      },
     ],
     github: 'https://github.com/SalmanSamiKhan/blog-db',
     link: 'https://blog-8c4l.onrender.com'
@@ -422,10 +426,7 @@ export const projects = [
     name: 'Keeper',
     desc: 'Google Keep clone using react',
     softwareSkills: [
-      {
-        skillName: 'JavaScript',
-        fontAwesomeClassname: 'logos:javascript',
-      },
+
       {
         skillName: 'Reactjs',
         fontAwesomeClassname: 'vscode-icons:file-type-reactjs',
@@ -442,9 +443,45 @@ export const projects = [
         skillName: 'CSS3',
         fontAwesomeClassname: 'vscode-icons:file-type-css',
       },
+      {
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
+      },
     ],
     github: 'https://github.com/SalmanSamiKhan/keeper',
     link: 'https://keeper-grhd.onrender.com'
+  },
+  {
+    name: 'Bookshelf',
+    desc: 'Online library for managing books',
+    softwareSkills: [
+      {
+        skillName: 'NodeJs',
+        fontAwesomeClassname: 'logos:nodejs-icon',
+      },
+      {
+        skillName: 'ExpressJs',
+        fontAwesomeClassname: 'simple-icons:express',
+      },
+      {
+        skillName: 'Reactjs',
+        fontAwesomeClassname: 'vscode-icons:file-type-reactjs',
+      },
+      {
+        skillName: 'Bootstrap',
+        fontAwesomeClassname: 'logos:bootstrap',
+      },
+      {
+        skillName: 'JWT',
+        fontAwesomeClassname: 'logos:jwt-icon',
+      },
+      {
+        skillName: 'MongoDB',
+        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
+      },
+    ],
+    github: 'https://github.com/SalmanSamiKhan/book-shelf',
+    link: '',
   },
 ];
 
