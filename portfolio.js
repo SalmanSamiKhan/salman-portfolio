@@ -426,7 +426,10 @@ export const projects = [
     name: 'Keeper',
     desc: 'Google Keep clone using react',
     softwareSkills: [
-
+      {
+        skillName: 'JavaScript',
+        fontAwesomeClassname: 'logos:javascript',
+      },
       {
         skillName: 'Reactjs',
         fontAwesomeClassname: 'vscode-icons:file-type-reactjs',
@@ -442,10 +445,6 @@ export const projects = [
       {
         skillName: 'CSS3',
         fontAwesomeClassname: 'vscode-icons:file-type-css',
-      },
-      {
-        skillName: 'MongoDB',
-        fontAwesomeClassname: 'vscode-icons:file-type-mongo',
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/keeper',
