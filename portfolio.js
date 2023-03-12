@@ -321,7 +321,7 @@ export const projects = [
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/bookmania',
-    link: 'https://bookmania.onrender.com',
+    link: 'https://bookmania.cyclic.app/',
   },
   {
     name: 'Notebook',
@@ -354,7 +354,7 @@ export const projects = [
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/notebook',
-    link: 'https://notebook-ooxp.onrender.com'
+    link: 'https://mynotebook.cyclic.app/'
   },
   {
     name: 'Online Todolist',
@@ -420,7 +420,7 @@ export const projects = [
       },
     ],
     github: 'https://github.com/SalmanSamiKhan/blog-db',
-    link: 'https://blog-8c4l.onrender.com'
+    link: 'https://blog-site.cyclic.app/'
   },
   {
     name: 'Keeper',
